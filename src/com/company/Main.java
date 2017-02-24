@@ -17,7 +17,7 @@ public class Main {
         gcdR(x,y);
 
         //Iterative:
-
+        gcdI(x,y);
 
 
     }
@@ -35,7 +35,13 @@ public class Main {
     }
     public static int gcdI(int a, int b)
     {
-        
+        while (b != 0)
+        {
+            int c = b;
+            b = a%b;
+            a = c;
+        }
+        return a;
     }
 
 }
